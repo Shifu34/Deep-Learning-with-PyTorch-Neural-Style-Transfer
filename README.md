@@ -64,6 +64,6 @@
 
 These are all the steps to do the style neural style transfer using pytorch.
 
-# We can do any content image and any style image you want to do.
+# We can do any content image and any style image we want to do.
 
 Happy Coding:)
