@@ -57,13 +57,13 @@
    - Style function will calculate the loss between target and style images.
 7. Training Loop:
    - So first, we initilize optimizier in which we pass target because we want to update the pixel value of the target when loss get minimized.
-   - we also initilize alpha, beta, epochs and show_every.
+   - We also initilize alpha, beta, epochs and show_every.
    - We create function to calculate the total loss.
    - We then loop through the epochs and train it.
    - After this we will plot the target image and the content image.
 
 These are all the steps to do the style neural style transfer using pytorch.
 
-# we can do any content image and any style image you want to do.
+# We can do any content image and any style image you want to do.
 
 Happy Coding:)
