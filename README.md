@@ -13,7 +13,7 @@
 
 - This is divided into seven steps:
   1. Setup the enviroment
-  2. Loading VGG pertrained model
+  2. Loading VGG pretrained model
   3. Preprocessing the image
   4. Deprocessing the image
   5. Get content,style features and create gram matrix
@@ -26,3 +26,28 @@
      ```
         !pip install torch torchvision
      ```
+   - After this you have to clone the repository for content and style images. For this we can use this command
+     ```
+        !git clone https://github.com/Shifu34/Deep-Learning-with-PyTorch-Neural-Style-Transfer.git
+     ```
+2. Loading VGG Pretrained Model:
+   - In this step, we will load the VGG pretrained model so that we can use it on our images.
+   - We will also remove the classification part of this model as it is not used in this implementation.
+   - We will also move it to the GPU as we will utilize GPU for this task.
+3. Preprocessing The Image:
+   - In this step, we will be preprocessing the image.
+   - We will resize the image to same size for both content and style image.
+   - We are also converting it to tensor by using transform.ToTensor().
+   - We are also normalizing the image using the default mean and standard deviation.
+   - We are also unsqueezing it using unsqueeze(0). It will add batch size to the tensor.
+   - After preprocessing both style and content image, we are sending it to the GPU.
+4. Deprocessing The Image:
+   - First we get the image back to the CPU for deprocessing.
+   - Then we convert it to numpy.
+   - We then squeeze it using squeeze(0). It will remove that batch size which was added by using unsqueeze(0).
+   - Then we transpose the image because T.ToTensor method take a transpose when converting it to the tensor.
+   - We also multiply it with standard deviation and add mean value.
+   - We also use image.clip(0,1) to set the tensor value in this range.
+5. Get Content, Style Features And Create Gram Matrix:
+   - First we create a function as get_feature which will give us features. Then we will get features for both style and content image.
+   - 
