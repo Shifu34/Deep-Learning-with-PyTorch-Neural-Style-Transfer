@@ -50,4 +50,20 @@
    - We also use image.clip(0,1) to set the tensor value in this range.
 5. Get Content, Style Features And Create Gram Matrix:
    - First we create a function as get_feature which will give us features. Then we will get features for both style and content image.
-   - 
+   - We also create a function gram_matrix which will give us gram matrix of a tensor.
+6. Creating Style and Content Loss Function:
+   - We create two function; content function and style function.
+   - Content function will calculate the loss between target and content features.
+   - Style function will calculate the loss between target and style images.
+7. Training Loop:
+   - So first, we initilize optimizier in which we pass target because we want to update the pixel value of the target when loss get minimized.
+   - we also initilize alpha, beta, epochs and show_every.
+   - We create function to calculate the total loss.
+   - We then loop through the epochs and train it.
+   - After this we will plot the target image and the content image.
+
+These are all the steps to do the style neural style transfer using pytorch.
+
+# we can do any content image and any style image you want to do.
+
+Happy Coding:)
